@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Diagnose your Phone</string>
+
+    <string name="title_main_activity">Installed Apps</string>
+    <string name="title_alternative_activity">Alternative Apps</string>
+
+    <string name="menu_setting">Other option</string>
+    <string name="menu_search">Search</string>
+
+    <string name="title_menu_order_by">Order by</string>
+    <string name="menu_alphabetical_order">Alphabetical order</string>
+    <string name="menu_installation_date">Installation date</string>
+    <string name="title_menu_filter">Filter</string>
+    <string name="menu_system_apps">System apps</string>
+    <string name="menu_user_apps">User apps</string>
+    <string name="menu_chinese_apps">Chinese apps</string>
+    <string name="menu_all_apps">All apps</string>
+    <string name="menu_remove_chinese_app_article">Read some articles</string>
+    <string name="menu_alternative_app_article">Alternative Apps</string>
+    <string name="menu_checkout_source_code">Checkout source code</string>
+    <string name="menu_export_selected_apps">Export selected apps</string>
+    <string name="menu_feedback">Send feedback</string>
+    <string name="menu_info_developer">Built with ❤️ by Abhilash Das</string>
+    <string name="menu_application_version">Application version \u2022 %1$s</string>
+
+    <string name="icon_attribution">Icon made by Freepik from www.flaticon.com</string>
+    <string name="don_t_worry_you_are_safe">Don\'t worry. You are safe.</string>
+</resources>

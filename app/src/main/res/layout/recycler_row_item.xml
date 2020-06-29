@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/recycler_row_item_heigth">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/image_dimension"
+            android:layout_height="@dimen/image_dimension"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/margin_16" />
+
+        <LinearLayout
+            android:id="@+id/texts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/expand"
+            android:layout_toRightOf="@id/imageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/primaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:id="@+id/secondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondary_text_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/secondary_text" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/expand"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="16dp"
+            android:layout_marginRight="@dimen/checkbox_margin_right"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_keyboard_arrow_down_black_24dp"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+</layout>

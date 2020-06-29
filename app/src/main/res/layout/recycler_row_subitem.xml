@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".views.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_item"
+        android:background="@color/primary_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/recycler_row_item_heigth">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/image_dimension"
+            android:layout_height="@dimen/image_dimension"
+            android:layout_margin="@dimen/margin_16"
+            android:src="@drawable/ic_public_black_24dp" />
+
+        <LinearLayout
+            android:id="@+id/texts_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:layout_marginRight="@dimen/margin_16"
+            android:layout_toRightOf="@id/imageView"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/primaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:id="@+id/secondaryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/secondary_text_margin"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/secondary_text" />
+        </LinearLayout>
+    </RelativeLayout>
+</layout>
