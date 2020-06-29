@@ -7,11 +7,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
-import com.zollet.diagnoseyourapp.util.Constants
 import com.zollet.diagnoseyourapp.R
 import com.zollet.diagnoseyourapp.databinding.FragmentNavigationDrawerBinding
+import com.zollet.diagnoseyourapp.util.Constants
 
 class NavigationDrawerFragment :
     com.google.android.material.bottomsheet.BottomSheetDialogFragment(), View.OnClickListener {
@@ -57,7 +58,6 @@ class NavigationDrawerFragment :
     override fun onClick(view: View) {
         when (view.id) {
             R.id.box_info_developer -> {
-
             }
             R.id.box_leave_feedback -> {
                 val mail = Constants.MAIL
@@ -65,11 +65,11 @@ class NavigationDrawerFragment :
                 openMailFeedback(mail, subject)
             }
             R.id.box_article_selected -> {
-
+                Toast.makeText(requireContext(), "Coming soon!!", Toast.LENGTH_SHORT).show()
             }
 
             R.id.box_code_selected -> {
-
+                openWebSite("https://github.com/das-abhilash/Diagnose-your-app")
             }
         }
     }
