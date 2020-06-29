@@ -7,7 +7,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.zollet.diagnoseyourapp.R
@@ -65,7 +64,7 @@ class NavigationDrawerFragment :
                 openMailFeedback(mail, subject)
             }
             R.id.box_article_selected -> {
-                Toast.makeText(requireContext(), "Coming soon!!", Toast.LENGTH_SHORT).show()
+                openWebSite("https://shashank-on-codehunt.github.io/Diagnose-your-Phone")
             }
 
             R.id.box_code_selected -> {
