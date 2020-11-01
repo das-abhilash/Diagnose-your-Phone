@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp.views
+package com.zollet.diagnoseyourphone.views
 
 import android.os.Bundle
 import android.view.Menu
@@ -13,14 +13,14 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.h6ah4i.android.widget.advrecyclerview.expandable.RecyclerViewExpandableItemManager
 import com.pixplicity.easyprefs.library.Prefs
-import com.zollet.diagnoseyourapp.R
-import com.zollet.diagnoseyourapp.adapters.AppExpandableRecyclerAdapter
-import com.zollet.diagnoseyourapp.databinding.ActivityInstalledAppsBinding
-import com.zollet.diagnoseyourapp.helpers.InsetDivider
-import com.zollet.diagnoseyourapp.models.App
-import com.zollet.diagnoseyourapp.util.AppUtils.redirectToPlayStore
-import com.zollet.diagnoseyourapp.util.Constants
-import com.zollet.diagnoseyourapp.viewmodels.InstalledAppViewModel
+import com.zollet.diagnoseyourphone.R
+import com.zollet.diagnoseyourphone.adapters.AppExpandableRecyclerAdapter
+import com.zollet.diagnoseyourphone.databinding.ActivityInstalledAppsBinding
+import com.zollet.diagnoseyourphone.helpers.InsetDivider
+import com.zollet.diagnoseyourphone.models.App
+import com.zollet.diagnoseyourphone.util.AppUtils.redirectToPlayStore
+import com.zollet.diagnoseyourphone.util.Constants
+import com.zollet.diagnoseyourphone.viewmodels.InstalledAppViewModel
 import java.util.*
 
 class InstalledAppActivity : BaseActivity(), View.OnClickListener,

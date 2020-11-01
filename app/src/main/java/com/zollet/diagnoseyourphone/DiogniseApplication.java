@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp;
+package com.zollet.diagnoseyourphone;
 
 import android.app.Application;
 import android.content.ContextWrapper;

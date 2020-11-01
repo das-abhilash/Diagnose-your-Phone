@@ -1,7 +1,7 @@
-package com.zollet.diagnoseyourapp.util
+package com.zollet.diagnoseyourphone.util
 
 import android.util.Log
-import com.zollet.diagnoseyourapp.BuildConfig
+import com.zollet.diagnoseyourphone.BuildConfig
 
 object Logger {
 

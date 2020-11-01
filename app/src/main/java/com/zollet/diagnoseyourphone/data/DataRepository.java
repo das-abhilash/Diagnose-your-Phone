@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp.data;
+package com.zollet.diagnoseyourphone.data;
 
 import android.content.Context;
 

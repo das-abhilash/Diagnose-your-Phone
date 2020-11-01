@@ -1,9 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.zollet.diagnoseyourapp">
+    package="com.zollet.diagnoseyourphone">
 
     <application
-        android:name=".DiogniseApplication"
+        android:name="com.zollet.diagnoseyourphone.DiogniseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity
-            android:name=".views.LaunchScreen"
+            android:name="com.zollet.diagnoseyourphone.views.LaunchScreen"
             android:noHistory="true"
             android:screenOrientation="portrait"
             android:theme="@style/LaunchScreen">
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".views.InstalledAppActivity"
+            android:name="com.zollet.diagnoseyourphone.views.InstalledAppActivity"
             android:screenOrientation="portrait" />
 
         <meta-data

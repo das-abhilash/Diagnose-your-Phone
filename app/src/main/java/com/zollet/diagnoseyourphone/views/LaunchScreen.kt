@@ -1,8 +1,8 @@
-package com.zollet.diagnoseyourapp.views
+package com.zollet.diagnoseyourphone.views
 
 import android.content.Intent
 import android.os.Bundle
-import com.zollet.diagnoseyourapp.viewmodels.BaseViewModel
+import com.zollet.diagnoseyourphone.viewmodels.BaseViewModel
 
 class LaunchScreen : BaseActivity() {
 

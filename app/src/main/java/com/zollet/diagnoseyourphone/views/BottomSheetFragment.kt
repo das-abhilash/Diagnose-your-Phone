@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp.views
+package com.zollet.diagnoseyourphone.views
 
 import android.app.Dialog
 import android.content.Context
@@ -11,10 +11,10 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import com.pixplicity.easyprefs.library.Prefs
-import com.zollet.diagnoseyourapp.R
-import com.zollet.diagnoseyourapp.databinding.FragmentBottomSheetBinding
-import com.zollet.diagnoseyourapp.util.Constants.*
-import com.zollet.diagnoseyourapp.util.Logger
+import com.zollet.diagnoseyourphone.R
+import com.zollet.diagnoseyourphone.databinding.FragmentBottomSheetBinding
+import com.zollet.diagnoseyourphone.util.Constants.*
+import com.zollet.diagnoseyourphone.util.Logger
 
 class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
 
@@ -92,31 +92,42 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
                 setStateStoredOfShowUserApps(false)
                 setStateStoredOfShowSystemApps(false)
                 setStateStoredOfShowChineseApps(false)
-
+                setStateStoredOfShowThreatApps(false)
             }
             FLAG_SHOW_SYSTEM_APPS -> {
                 setStateStoredOfShowAllApps(false)
                 setStateStoredOfShowUserApps(false)
                 setStateStoredOfShowSystemApps(true)
                 setStateStoredOfShowChineseApps(false)
+                setStateStoredOfShowThreatApps(false)
             }
             FLAG_SHOW_USER_APPS -> {
                 setStateStoredOfShowAllApps(false)
                 setStateStoredOfShowUserApps(true)
                 setStateStoredOfShowSystemApps(false)
                 setStateStoredOfShowChineseApps(false)
+                setStateStoredOfShowThreatApps(false)
             }
             FLAG_SHOW_CHINESE_APPS -> {
                 setStateStoredOfShowAllApps(false)
                 setStateStoredOfShowUserApps(false)
                 setStateStoredOfShowSystemApps(false)
                 setStateStoredOfShowChineseApps(true)
+                setStateStoredOfShowThreatApps(false)
+            }
+            FLAG_SHOW_THREAT_APPS -> {
+                setStateStoredOfShowAllApps(false)
+                setStateStoredOfShowUserApps(false)
+                setStateStoredOfShowSystemApps(false)
+                setStateStoredOfShowChineseApps(false)
+                setStateStoredOfShowThreatApps(true)
             }
             else -> {
                 setStateStoredOfShowAllApps(false)
                 setStateStoredOfShowUserApps(true)
                 setStateStoredOfShowSystemApps(false)
                 setStateStoredOfShowChineseApps(false)
+                setStateStoredOfShowThreatApps(false)
             }
         }
     }
@@ -163,6 +174,13 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
             binding!!.chineseChineseApps.visibility = View.GONE
     }
 
+    private fun setStateStoredOfShowThreatApps(status: Boolean) {
+        if (status)
+            binding!!.threatThreatApps.visibility = View.VISIBLE
+        else
+            binding!!.threatThreatApps.visibility = View.GONE
+    }
+
     private fun setOnclickListener() {
         binding!!.alphabeticalOrder.setOnClickListener(this)
         binding!!.installationDate.setOnClickListener(this)
@@ -170,6 +188,7 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
         binding!!.chineseApps.setOnClickListener(this)
         binding!!.allApps.setOnClickListener(this)
         binding!!.userApps.setOnClickListener(this)
+        binding!!.threatApps.setOnClickListener(this)
     }
 
     override fun onClick(view: View) {
@@ -204,6 +223,10 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
                 showChineseAppsClicked()
                 dismiss()
             }
+            R.id.threat_apps -> {
+                showThreatAppsClicked()
+                dismiss()
+            }
             R.id.all_apps -> {
                 showAllAppsClicked()
                 dismiss()
@@ -233,11 +256,13 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
         val checkedAllApps = binding!!.checkedAllApps
         val chineseChineseApps = binding!!.chineseChineseApps
         val userApps = binding!!.checkedUserApps
+        val threatApps = binding!!.threatThreatApps
         if (systemApps.visibility == View.VISIBLE) return
         userApps.visibility = View.GONE
         systemApps.visibility = View.VISIBLE
         checkedAllApps.visibility = View.GONE
         chineseChineseApps.visibility = View.GONE
+        threatApps.visibility = View.GONE
         Prefs.putInt(FLAG_SHOW_APP, FLAG_SHOW_SYSTEM_APPS)
         isSelectedBottomSheetFragment!!.onSelectedShowSystemApps()
     }
@@ -247,11 +272,13 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
         val checkedAllApps = binding!!.checkedAllApps
         val chineseChineseApps = binding!!.chineseChineseApps
         val userApps = binding!!.checkedUserApps
+        val threatApps = binding!!.threatThreatApps
         if (userApps.visibility == View.VISIBLE) return
         userApps.visibility = View.VISIBLE
         systemApps.visibility = View.GONE
         checkedAllApps.visibility = View.GONE
         chineseChineseApps.visibility = View.GONE
+        threatApps.visibility = View.GONE
         Prefs.putInt(FLAG_SHOW_APP, FLAG_SHOW_USER_APPS)
         isSelectedBottomSheetFragment!!.onSelectedShowUserApps()
     }
@@ -261,11 +288,13 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
         val checkedAllApps = binding!!.checkedAllApps
         val chineseChineseApps = binding!!.chineseChineseApps
         val userApps = binding!!.checkedUserApps
+        val threatApps = binding!!.threatThreatApps
         if (checkedAllApps.visibility == View.VISIBLE) return
         userApps.visibility = View.GONE
         systemApps.visibility = View.GONE
         checkedAllApps.visibility = View.VISIBLE
         chineseChineseApps.visibility = View.GONE
+        threatApps.visibility = View.GONE
         Prefs.putInt(FLAG_SHOW_APP, FLAG_SHOW_ALL_APPS)
         isSelectedBottomSheetFragment!!.onSelectedShowAllApps()
     }
@@ -275,12 +304,30 @@ class BottomSheetFragment : BottomSheetDialogFragment(), View.OnClickListener {
         val checkedAllApps = binding!!.checkedAllApps
         val chineseChineseApps = binding!!.chineseChineseApps
         val userApps = binding!!.checkedUserApps
+        val threatApps = binding!!.threatThreatApps
         if (chineseChineseApps.visibility == View.VISIBLE) return
         userApps.visibility = View.GONE
         systemApps.visibility = View.GONE
         checkedAllApps.visibility = View.GONE
+        threatApps.visibility = View.GONE
         chineseChineseApps.visibility = View.VISIBLE
         Prefs.putInt(FLAG_SHOW_APP, FLAG_SHOW_CHINESE_APPS)
+        isSelectedBottomSheetFragment!!.onSelectedShowChineseApps()
+    }
+
+    private fun showThreatAppsClicked() {
+        val systemApps = binding!!.checkedSystemApps
+        val checkedAllApps = binding!!.checkedAllApps
+        val chineseChineseApps = binding!!.chineseChineseApps
+        val userApps = binding!!.checkedUserApps
+        val threatApps = binding!!.threatThreatApps
+        if (chineseChineseApps.visibility == View.VISIBLE) return
+        userApps.visibility = View.GONE
+        systemApps.visibility = View.GONE
+        checkedAllApps.visibility = View.GONE
+        chineseChineseApps.visibility = View.GONE
+        threatApps.visibility = View.VISIBLE
+        Prefs.putInt(FLAG_SHOW_APP, FLAG_SHOW_THREAT_APPS)
         isSelectedBottomSheetFragment!!.onSelectedShowChineseApps()
     }
 }

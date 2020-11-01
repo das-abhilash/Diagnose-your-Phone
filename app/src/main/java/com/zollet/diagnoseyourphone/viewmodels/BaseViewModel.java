@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp.viewmodels;
+package com.zollet.diagnoseyourphone.viewmodels;
 
 import android.app.Application;
 

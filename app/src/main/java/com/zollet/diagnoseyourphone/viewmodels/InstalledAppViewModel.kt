@@ -1,10 +1,10 @@
-package com.zollet.diagnoseyourapp.viewmodels
+package com.zollet.diagnoseyourphone.viewmodels
 
 import android.app.Application
 import androidx.lifecycle.LiveData
-import com.zollet.diagnoseyourapp.data.DataRepository.getDataRepository
-import com.zollet.diagnoseyourapp.data.LoadApps
-import com.zollet.diagnoseyourapp.models.App
+import com.zollet.diagnoseyourphone.data.DataRepository.getDataRepository
+import com.zollet.diagnoseyourphone.data.LoadApps
+import com.zollet.diagnoseyourphone.models.App
 
 class InstalledAppViewModel(application: Application) : BaseViewModel(application) {
 

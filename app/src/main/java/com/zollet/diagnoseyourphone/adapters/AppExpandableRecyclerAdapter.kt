@@ -1,8 +1,6 @@
-package com.zollet.diagnoseyourapp.adapters
+package com.zollet.diagnoseyourphone.adapters
 
 import android.content.Context
-import android.content.Intent
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,10 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractExpandableItemAdapter
 import com.h6ah4i.android.widget.advrecyclerview.utils.AbstractExpandableItemViewHolder
-import com.zollet.diagnoseyourapp.R
-import com.zollet.diagnoseyourapp.models.AlternativeApp
-import com.zollet.diagnoseyourapp.models.App
-import com.zollet.diagnoseyourapp.util.AppUtils
+import com.zollet.diagnoseyourphone.R
+import com.zollet.diagnoseyourphone.models.AlternativeApp
+import com.zollet.diagnoseyourphone.models.App
+import com.zollet.diagnoseyourphone.util.AppUtils
 import kotlinx.android.synthetic.main.recycler_row_item.view.*
 import kotlinx.android.synthetic.main.recycler_row_subitem.view.primaryText
 import kotlinx.android.synthetic.main.recycler_row_subitem.view.rl_item

@@ -1,11 +1,11 @@
-package com.zollet.diagnoseyourapp.views
+package com.zollet.diagnoseyourphone.views
 
 import android.os.Bundle
 
 import androidx.appcompat.app.AppCompatActivity
 
-import com.zollet.diagnoseyourapp.util.Logger
-import com.zollet.diagnoseyourapp.viewmodels.BaseViewModel
+import com.zollet.diagnoseyourphone.util.Logger
+import com.zollet.diagnoseyourphone.viewmodels.BaseViewModel
 
 abstract class BaseActivity : AppCompatActivity() {
 

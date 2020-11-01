@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp.views
+package com.zollet.diagnoseyourphone.views
 
 import android.app.Dialog
 import android.content.Intent
@@ -9,9 +9,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.DialogFragment
-import com.zollet.diagnoseyourapp.R
-import com.zollet.diagnoseyourapp.databinding.FragmentNavigationDrawerBinding
-import com.zollet.diagnoseyourapp.util.Constants
+import com.zollet.diagnoseyourphone.R
+import com.zollet.diagnoseyourphone.databinding.FragmentNavigationDrawerBinding
+import com.zollet.diagnoseyourphone.util.Constants
 
 class NavigationDrawerFragment :
     com.google.android.material.bottomsheet.BottomSheetDialogFragment(), View.OnClickListener {
@@ -68,7 +68,7 @@ class NavigationDrawerFragment :
             }
 
             R.id.box_code_selected -> {
-                openWebSite("https://github.com/das-abhilash/Diagnose-your-app")
+                openWebSite("https://github.com/das-abhilash/Diagnose-your-Phone")
             }
         }
     }

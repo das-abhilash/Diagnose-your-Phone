@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp
+package com.zollet.diagnoseyourphone
 
 import org.junit.Test
 

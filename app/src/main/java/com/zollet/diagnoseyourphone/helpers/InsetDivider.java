@@ -1,4 +1,4 @@
-package com.zollet.diagnoseyourapp.helpers;
+package com.zollet.diagnoseyourphone.helpers;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -11,7 +11,7 @@ import androidx.core.view.ViewCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.zollet.diagnoseyourapp.R;
+import com.zollet.diagnoseyourphone.R;
 
 public class InsetDivider extends RecyclerView.ItemDecoration {
 

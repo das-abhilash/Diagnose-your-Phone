@@ -1,12 +1,12 @@
-package com.zollet.diagnoseyourapp.data
+package com.zollet.diagnoseyourphone.data
 
 import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.graphics.drawable.Drawable
 import androidx.lifecycle.MutableLiveData
-import com.zollet.diagnoseyourapp.models.App
-import com.zollet.diagnoseyourapp.util.AppUtils
+import com.zollet.diagnoseyourphone.models.App
+import com.zollet.diagnoseyourphone.util.AppUtils
 import java.util.*
 import kotlin.concurrent.thread
 
