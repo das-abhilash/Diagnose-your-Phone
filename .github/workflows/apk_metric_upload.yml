@@ -1,0 +1,35 @@
+name: App Size Tracker
+
+on:
+  push:
+    branches:
+      - master
+
+
+jobs:
+  ApkSizeTracker:
+    runs-on: ubuntu-latest
+    name: Apk size tracker
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+
+      - name: Upload action step
+        id: apkSize
+        uses: zsfVishnu/apk-metric-upload@v1.0.0
+        with:
+          flavor: debug
+
+      - name: Calculate delta
+        id: apk-size-tracker
+        uses: zsfVishnu/apk-size-tracker@v1.0.0
+        with:
+          flavor: 'debug'
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          threshold: 0
