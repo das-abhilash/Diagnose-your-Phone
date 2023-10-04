@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: 16
 
-
       - name: Upload action step
         id: apkSize
         uses: zsfVishnu/apk-metric-upload@v1.0.0
